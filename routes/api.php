@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get("todolist/delete{id}","ApiTodolistController@getDelete");
+Route::post("todolist/update{id}","ApiTodolistController@postUpdate");
+Route::get("todolist/create","ApiTodolistController@postCreate");
+Route::get("todolist/list","ApiTodolistController@getList");
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
